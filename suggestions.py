@@ -14,7 +14,7 @@ model = AutoModelForSequenceClassification.from_pretrained("yiyanghkust/finbert-
 
 
 def analyze_sentiment(text):
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True,max_length=512)
     outputs = model(**inputs)
     probs = F.softmax(outputs.logits, dim=1)
     sentiment = torch.argmax(probs).item()
