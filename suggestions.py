@@ -48,13 +48,13 @@ def renderTabSuggestions():
             scoreSentiments -=1
         else :
             scoreSentiments +=0
-    if(len(resultsText > 0)):
+    if(len(resultsText) > 0):
         avgScore = scoreSentiments/len(resultsText)
-    if(len(0 == resultsText ):
+    if(len(resultsText)==0):
         st.write("Sorry,we couldn't fetch any news for sentiment evaluation ")
     if ( avgScore > 0.5 ):
         st.write("Great news! The overall sentiment is positive according to the recent news. Based on this, we recommend proceeding with your investment or decision")
     elif ( avgScore< -0.5):
-        st.write("It seems the sentiment is negative accorind to the recent news. Based on this, we suggest you reconsider your decision or look for other options to meet your needs")
+        st.write("It seems the sentiment is negative accoring to the recent news. Based on this, we suggest you reconsider your decision or look for other options to meet your needs")
     elif (-0.5< avgScore < 0.5):
         st.write("The sentiment is neutral according to the recent news, meaning the feedback is mixed. It might be a good idea to gather more insights before making a final decision.")
