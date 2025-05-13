@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import plotly.graph_objects as go
 
-df = pd.read_csv("/workspaces/codespaces-blank/reliance_data_2018_2023.csv")
+df = pd.read_csv("reliance_data_2018_2023.csv")
 
 def renderTabGraphs():
     st.text("Close vs Time ")
