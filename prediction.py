@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd 
 
 
-model = joblib.load("/workspaces/codespaces-blank/xgboost_reliance_pred_model.pkl")
+model = joblib.load("xgboost_reliance_pred_model.pkl")
 
 def renderTabPredictor():
     open= st.number_input("Enter Open value")
