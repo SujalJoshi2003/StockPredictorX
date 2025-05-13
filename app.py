@@ -3,6 +3,9 @@ from data import renderTabGlimpse
 from graphs import renderTabGraphs
 from prediction import renderTabPredictor
 from suggestions import renderTabSuggestions
+import os
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
+
 
 st.title("ReliancePredX")
 st.text("")
