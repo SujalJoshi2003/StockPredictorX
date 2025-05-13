@@ -1,7 +1,7 @@
 import pandas as pd 
 import streamlit as st
 
-df = pd.read_csv("/workspaces/codespaces-blank/reliance_data_2018_2023.csv")
+df = pd.read_csv("reliance_data_2018_2023.csv")
 
 def renderTabGlimpse():
     st.text("")
